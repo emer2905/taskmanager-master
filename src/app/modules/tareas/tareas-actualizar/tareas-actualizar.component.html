@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Actualiza los datos</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <mat-form-field>
+            <mat-label>Titulo</mat-label>
+            <input matInput formControlName="titulo">
+            <mat-error *ngIf="form.get('titulo')?.hasError('titulo')">
+              Titulo es requerido
+            </mat-error>
+          </mat-form-field>
+    </div>
+   <div>
+    <mat-form-field>
+        <mat-label>Descripcion</mat-label>
+        <input matInput formControlName="descripcion">
+        <mat-error *ngIf="form.get('descripcion')?.hasError('descripcion')">
+          Descripcion es requerido
+        </mat-error>     
+      </mat-form-field>
+   </div>
+
+    <div>
+        <label>Estado</label>
+        <mat-radio-group formControlName="estado">
+          <mat-radio-button value="false" [checked]="data.tarea.Estado == false">Pendiente</mat-radio-button>
+          <mat-radio-button value="true" [checked]="data.tarea.Estado == true">Completado</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-raised-button style="background-color: lightcoral;" (click)="onCancel()">Cancelar</button>
+        <button mat-raised-button style="background-color: lightgreen;"  [disabled]="form.invalid" type="submit">Guardar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Administrador de tareas</h2>
+<mat-dialog-content>{{data.message}}</mat-dialog-content>
+<mat-dialog-actions>
+    <div mat-dialog-actions>
+        <button mat-button (click)="cerrarDialogo()">No</button>
+        <button mat-button (click)="confirmado()" cdkFocusInitial>Sí</button>
+    </div>
+</mat-dialog-actions>

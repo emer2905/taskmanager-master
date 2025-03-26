@@ -1,0 +1,10 @@
+<div class="align-center">
+    <h2>User Login</h2>    
+      <input  placeholder="Email Address" [(ngModel)]="user.email"  />
+      <div class="btn-div">
+        <button type="submit" (click)="onLogin()"  class="login-btn">
+          Login
+        </button>
+      </div>
+      <label style="color:red;">{{errorMessage}}</label>
+ </div>
