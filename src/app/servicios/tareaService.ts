@@ -7,7 +7,7 @@ import { ActualizarTareaDTO } from '../dtos/actualizarTareaDTO';
 import { GuardarTareaDTO } from '../dtos/guardarTareaDTO';
 
 
-const API_URL = 'https://app-nvc5nplm7q-uc.a.run.app/api/tasks';
+const API_URL = 'https://app-vxl24pdgsq-uc.a.run.app/api/tasks';
 
 @Injectable({
   providedIn: 'root',
